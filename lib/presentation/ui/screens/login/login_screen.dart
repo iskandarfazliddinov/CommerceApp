@@ -28,6 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     return SafeArea(
       child: Scaffold(
+        backgroundColor: AppColors.backgroundColor,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -90,10 +91,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         "assets/icons/google1.png",
                       ),
                       onPressed: () {},
-                      label: const Text(
+                      label:  Text(
                         "Google",
                         style: TextStyle(
-                          color: Colors.black,
+                          color: AppColors.black,
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
@@ -110,10 +111,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         "assets/icons/facebook.png",
                       ),
                       onPressed: () {},
-                      label: const Text(
+                      label:  Text(
                         "Facebook",
                         style: TextStyle(
-                          color: Colors.black,
+                          color: AppColors.black,
                         ),
                       ),
                       style: ElevatedButton.styleFrom(

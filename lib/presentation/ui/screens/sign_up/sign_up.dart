@@ -1,3 +1,4 @@
+import 'package:commerce_app/presentation/ui/resources/app_colors.dart';
 import 'package:commerce_app/presentation/ui/resources/app_images.dart';
 import 'package:commerce_app/presentation/ui/screens/load/load_screen.dart';
 import 'package:commerce_app/presentation/ui/widgets/w_bottom_title.dart';
@@ -24,6 +25,7 @@ class _SignUpState extends State<SignUp> {
     TextEditingController controllerConPassword = TextEditingController();
 
     return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

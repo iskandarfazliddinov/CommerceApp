@@ -1,3 +1,4 @@
+import 'package:commerce_app/presentation/ui/resources/app_colors.dart';
 import 'package:commerce_app/presentation/ui/resources/app_images.dart';
 import 'package:commerce_app/presentation/ui/resources/app_styles.dart';
 import 'package:commerce_app/presentation/ui/widgets/w_button.dart';
@@ -22,6 +23,7 @@ class _ResetScreenState extends State<ResetScreen> {
 
     return SafeArea(
         child: Scaffold(
+          backgroundColor: AppColors.backgroundColor,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

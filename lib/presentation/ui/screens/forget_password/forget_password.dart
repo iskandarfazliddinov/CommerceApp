@@ -1,3 +1,4 @@
+import 'package:commerce_app/presentation/ui/resources/app_colors.dart';
 import 'package:commerce_app/presentation/ui/resources/app_images.dart';
 import 'package:commerce_app/presentation/ui/resources/app_styles.dart';
 import 'package:commerce_app/presentation/ui/widgets/w_button.dart';
@@ -20,6 +21,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
     final screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

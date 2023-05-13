@@ -1,3 +1,4 @@
+import 'package:commerce_app/presentation/ui/resources/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class WTextFiled extends StatelessWidget {
@@ -15,6 +16,7 @@ class WTextFiled extends StatelessWidget {
       child: TextField(
         keyboardType: type,
         obscureText: obscureText,
+        style: TextStyle(color: AppColors.black.withOpacity(0.8),),
         controller: controller,
         decoration:  InputDecoration(
           label: Text(
