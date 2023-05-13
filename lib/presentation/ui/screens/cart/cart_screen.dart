@@ -23,7 +23,7 @@ class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
         title: Center(
           child: Text(
@@ -31,7 +31,7 @@ class _CartScreenState extends State<CartScreen> {
             style: Styles.getLabelStyle(),
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.backgroundColor,
         elevation: 0,
         actions: [
           SvgPicture.asset(

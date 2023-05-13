@@ -20,7 +20,7 @@ class _DeliveryInfoScreenState extends State<DeliveryInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.backgroundColor,
       appBar: _getAppBar(),
       body: SingleChildScrollView(
         child: Padding(
@@ -56,7 +56,7 @@ class _DeliveryInfoScreenState extends State<DeliveryInfoScreen> {
                     "16 E Birch Hill Road\nFairbanks, NY, 99312\nUnited States\n\n865-5585 57587",),
                   GestureDetector(
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddAddressScreen(),));
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const AddAddressScreen(),));
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -211,21 +211,21 @@ class _DeliveryInfoScreenState extends State<DeliveryInfoScreen> {
       );
 
   _getAppBar() => AppBar(
-    title: const Center(
+    title:  Center(
         child: Text(
           "Deliver Information",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: AppColors.black),
         )),
     leading: GestureDetector(
       onTap: () {
         Navigator.of(context).pop();
       },
-      child: const Icon(
+      child:  Icon(
         Icons.arrow_back_ios,
         color: AppColors.black,
       ),
     ),
-    backgroundColor: Colors.white,
+    backgroundColor: AppColors.backgroundColor,
     elevation: 0,
     actions: const [
       SizedBox(

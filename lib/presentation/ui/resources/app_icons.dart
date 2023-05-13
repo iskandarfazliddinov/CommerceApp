@@ -7,10 +7,15 @@ abstract class AppIcons {
   static const String laptop = "$pathIcon/laptop_.png";
   static const String watch = "$pathIcon/watch_.png";
 
-  static const String home = "$pathIcon/home.svg";
+  static String home = "$pathIcon/home.svg";
   static const String wishlist = "$pathIcon/wishlist.svg";
   static const String cart = "$pathIcon/cart.svg";
   static const String account = "$pathIcon/account.svg";
+
+  static const String homeDark = "$pathIcon/home_dark.svg";
+  static const String wishlistDark = "$pathIcon/wishlist_dark.svg";
+  static const String cartDark = "$pathIcon/cart_dark.svg";
+  static const String accountDark = "$pathIcon/account_dark.svg";
 
   static const String gift = "$pathIcon/gift.svg";
   static const String help = "$pathIcon/help.svg";
@@ -19,8 +24,8 @@ abstract class AppIcons {
   static const String privacy = "$pathIcon/privacy.svg";
 
   static const String homeDef = "$pathIcon/home_def.svg";
-  static const String wishlistSel = "$pathIcon/wishlist_sel.svg";
-  static const String cartSel = "$pathIcon/cart_sel.svg";
-  static const String accountSel = "$pathIcon/account_sel.svg";
+  static String wishlistSel = "$pathIcon/wishlist_sel.svg";
+  static String cartSel = "$pathIcon/cart_sel.svg";
+  static String accountSel = "$pathIcon/account_sel.svg";
   static const String card = "$pathIcon/card.svg";
 }

@@ -20,7 +20,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _getAppBar(),
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.backgroundColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(right: 30.0,left: 30.0,top: 15.0),
@@ -47,20 +47,23 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                       const SizedBox(
                         height: 12,
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 150,
                         child: TextField(
                           maxLines: 1,
                           keyboardType: TextInputType.text,
                           decoration: InputDecoration(
                             hintText: "09/28",
+                            hintStyle: TextStyle(
+                              color: AppColors.black
+                            ),
                             enabledBorder: OutlineInputBorder(
                               borderSide:
-                                  BorderSide(color: Colors.black, width: 0.1),
+                                  BorderSide(color: AppColors.black, width: 0.1),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide:
-                                  BorderSide(color: Colors.black, width: 0.1),
+                                  BorderSide(color: AppColors.black, width: 0.1),
                             ),
                           ),
                         ),
@@ -77,20 +80,23 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                       const SizedBox(
                         height: 12,
                       ),
-                      const SizedBox(
+                       SizedBox(
                         width: 150,
                         child: TextField(
                           maxLines: 1,
                           keyboardType: TextInputType.text,
                           decoration: InputDecoration(
                             hintText: "235",
+                            hintStyle: TextStyle(
+                              color: AppColors.black
+                            ),
                             enabledBorder: OutlineInputBorder(
                               borderSide:
-                                  BorderSide(color: Colors.black, width: 0.1),
+                                  BorderSide(color: AppColors.black, width: 0.1),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide:
-                                  BorderSide(color: Colors.black, width: 0.1),
+                                  BorderSide(color: AppColors.black, width: 0.1),
                             ),
                           ),
                         ),
@@ -146,11 +152,14 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
               keyboardType: TextInputType.text,
               decoration: InputDecoration(
                 hintText: hints,
-                enabledBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black, width: 0.1),
+                hintStyle: TextStyle(
+                  color: AppColors.black.withOpacity(0.8),
                 ),
-                focusedBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black, width: 0.1),
+                enabledBorder:  OutlineInputBorder(
+                  borderSide: BorderSide(color: AppColors.black, width: 0.1),
+                ),
+                focusedBorder:  OutlineInputBorder(
+                  borderSide: BorderSide(color: AppColors.black, width: 0.1),
                 ),
               ),
             ),
@@ -159,21 +168,21 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
       );
 
   _getAppBar() => AppBar(
-        title: const Center(
+        title:  Center(
             child: Text(
           "Checkout",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: AppColors.black),
         )),
         leading: GestureDetector(
           onTap: () {
             Navigator.of(context).pop();
           },
-          child: const Icon(
+          child:  Icon(
             Icons.arrow_back_ios,
             color: AppColors.black,
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.backgroundColor,
         elevation: 0,
         actions: [
           SvgPicture.asset(AppIcons.wishlist),

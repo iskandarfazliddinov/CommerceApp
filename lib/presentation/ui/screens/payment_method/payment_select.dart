@@ -19,7 +19,7 @@ class _PaymentSelectScreenState extends State<PaymentSelectScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.backgroundColor,
       appBar: _getAppBar(),
       body: SingleChildScrollView(
         child: Padding(
@@ -37,6 +37,7 @@ class _PaymentSelectScreenState extends State<PaymentSelectScreen> {
                 padding: const EdgeInsets.only(bottom: 15.0),
                 child: Card(
                   elevation: 4,
+                  color: AppColors.backgroundColor,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -148,21 +149,21 @@ class _PaymentSelectScreenState extends State<PaymentSelectScreen> {
         ),
       );
   _getAppBar() => AppBar(
-    title: const Center(
+    title:  Center(
         child: Text(
           "Payment Method",
-          style: TextStyle(color: Colors.black),
-        )),
+          style: TextStyle(color: AppColors.black),
+        ),),
     leading: GestureDetector(
       onTap: () {
         Navigator.of(context).pop();
       },
-      child: const Icon(
+      child:  Icon(
         Icons.arrow_back_ios,
         color: AppColors.black,
       ),
     ),
-    backgroundColor: Colors.white,
+    backgroundColor: AppColors.backgroundColor,
     elevation: 0,
     actions: [
       SvgPicture.asset(AppIcons.wishlist),

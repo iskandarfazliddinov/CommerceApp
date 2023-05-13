@@ -13,7 +13,7 @@ class WAppBar extends StatelessWidget {
         onTap: () {
           Navigator.of(context).pop();
         },
-        child: const Icon(
+        child:  Icon(
           Icons.arrow_back_ios,
           color: AppColors.black,
         ),

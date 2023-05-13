@@ -35,6 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
     var screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
       key: _key,
       appBar: _getAppBar(),
       body: SingleChildScrollView(
@@ -77,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const SizedBox(height: 22),
               SizedBox(
-                height: screenHeight*0.5,
+                height: screenHeight*0.3,
                 child: GridView(
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
@@ -110,6 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   _getDrawer() => Drawer(
+    backgroundColor: AppColors.backgroundColor,
         child: ListView(
           children: [
             Column(
@@ -175,7 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
       );
 
   _getAppBar() => AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.backgroundColor,
         elevation: 0,
         titleSpacing: 0,
         automaticallyImplyLeading: false,
@@ -192,6 +194,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.all(8.0),
                   child: SvgPicture.asset(
                     AppImages.logoMenu,
+                    color: AppColors.black,
                   ),
                 ),
               ),
@@ -256,7 +259,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-          style: const TextStyle(
+          style:  TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w500,
               color: AppColors.black,

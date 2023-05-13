@@ -6,6 +6,8 @@ import 'package:commerce_app/presentation/ui/widgets/w_product_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../resources/app_colors.dart';
+
 class WishListScreen extends StatefulWidget {
   const WishListScreen({Key? key}) : super(key: key);
 
@@ -17,7 +19,7 @@ class _WishListScreenState extends State<WishListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
         title: Center(
           child: Text(
@@ -25,7 +27,7 @@ class _WishListScreenState extends State<WishListScreen> {
             style: Styles.getLabelStyle(),
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.backgroundColor,
         elevation: 0,
         bottom: PreferredSize(
           preferredSize: const Size(double.infinity, 1),

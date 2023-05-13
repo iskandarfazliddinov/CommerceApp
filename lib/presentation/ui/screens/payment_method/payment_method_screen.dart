@@ -19,7 +19,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _getAppBar(),
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.backgroundColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(30.0),
@@ -46,20 +46,21 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                       const SizedBox(
                         height: 12,
                       ),
-                      const SizedBox(
+                       SizedBox(
                         width: 150,
                         child: TextField(
                           maxLines: 1,
                           keyboardType: TextInputType.text,
                           decoration: InputDecoration(
                             hintText: "09/28",
+                            hintStyle: TextStyle(color: AppColors.black),
                             enabledBorder: OutlineInputBorder(
                               borderSide:
-                                  BorderSide(color: Colors.black, width: 0.1),
+                                  BorderSide(color: AppColors.black, width: 0.1),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide:
-                                  BorderSide(color: Colors.black, width: 0.1),
+                                  BorderSide(color: AppColors.black, width: 0.1),
                             ),
                           ),
                         ),
@@ -93,20 +94,21 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                       const SizedBox(
                         height: 12,
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 150,
                         child: TextField(
                           maxLines: 1,
                           keyboardType: TextInputType.text,
                           decoration: InputDecoration(
                             hintText: "235",
+                            hintStyle: TextStyle(color: AppColors.black),
                             enabledBorder: OutlineInputBorder(
                               borderSide:
-                                  BorderSide(color: Colors.black, width: 0.1),
+                                  BorderSide(color: AppColors.black, width: 0.1),
                             ),
                             focusedBorder: OutlineInputBorder(
                               borderSide:
-                                  BorderSide(color: Colors.black, width: 0.1),
+                                  BorderSide(color: AppColors.black, width: 0.1),
                             ),
                           ),
                         ),
@@ -158,11 +160,12 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
               keyboardType: TextInputType.text,
               decoration: InputDecoration(
                 hintText: hints,
+                hintStyle: TextStyle(color: AppColors.black.withOpacity(0.8),),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black, width: 0.1),
+                  borderSide: BorderSide(color: AppColors.black, width: 0.1),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black, width: 0.1),
+                  borderSide: BorderSide(color: AppColors.black, width: 0.1),
                 ),
               ),
             ),
@@ -171,21 +174,21 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
       );
 
   _getAppBar() => AppBar(
-        title: const Center(
+        title:  Center(
             child: Text(
           "Payment Method",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: AppColors.black),
         )),
         leading: GestureDetector(
           onTap: () {
             Navigator.of(context).pop();
           },
-          child: const Icon(
+          child:  Icon(
             Icons.arrow_back_ios,
             color: AppColors.black,
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.backgroundColor,
         elevation: 0,
         actions: [
           Center(

@@ -15,7 +15,7 @@ abstract class Styles {
         fontFamily: 'MainFont',
       );
 
-  static TextStyle getOnBoardingTitle() => const TextStyle(
+  static TextStyle getOnBoardingTitle() =>  TextStyle(
       fontSize: 26.0,
       color: AppColors.black,
       fontWeight: FontWeight.w700,
@@ -34,17 +34,17 @@ abstract class Styles {
         fontWeight: FontWeight.w600,
       );
 
-  static TextStyle getNodeTitle() => const TextStyle(
-        color: Colors.black,
+  static TextStyle getNodeTitle() =>  TextStyle(
+        color: AppColors.black,
         fontSize: 16,
         height: 1.4,
         fontWeight: FontWeight.w500,
       );
 
-  static TextStyle getLabelStyle() => const TextStyle(
+  static TextStyle getLabelStyle() =>  TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w600,
-      color: Colors.black,
+      color: AppColors.black,
       fontFamily: 'MainFont');
 
   static TextStyle getContentStyle() => const TextStyle(

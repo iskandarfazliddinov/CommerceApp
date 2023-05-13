@@ -26,6 +26,7 @@ class _EditScreenState extends State<EditScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _getAppBar(),
+      backgroundColor: AppColors.backgroundColor,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(30.0),
@@ -61,21 +62,21 @@ class _EditScreenState extends State<EditScreen> {
     );
   }
   _getAppBar() => AppBar(
-    title: const Center(
+    title:  Center(
         child: Text(
           "Edit Address",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: AppColors.black),
         )),
     leading: GestureDetector(
       onTap: () {
         Navigator.of(context).pop();
       },
-      child: const Icon(
+      child:  Icon(
         Icons.arrow_back_ios,
         color: AppColors.black,
       ),
     ),
-    backgroundColor: Colors.white,
+    backgroundColor: AppColors.backgroundColor,
     elevation: 0,
     actions: [
       SvgPicture.asset(AppIcons.wishlist),
@@ -114,11 +115,12 @@ class _EditScreenState extends State<EditScreen> {
               keyboardType: input,
               decoration: InputDecoration(
                 hintText: hint,
-                enabledBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black, width: 0.1),
+                hintStyle: TextStyle(color: AppColors.black.withOpacity(0.8),),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: AppColors.black, width: 0.1),
                 ),
-                focusedBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black, width: 0.1),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: AppColors.black, width: 0.1),
                 ),
               ),
             ),

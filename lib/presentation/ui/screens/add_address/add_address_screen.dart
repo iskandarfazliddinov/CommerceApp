@@ -24,6 +24,7 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
       appBar: _getAppBar(),
       body: SingleChildScrollView(
         child: Padding(
@@ -131,11 +132,12 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
               keyboardType: input,
               decoration: InputDecoration(
                 hintText: hint,
-                enabledBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black, width: 0.1),
+                hintStyle: TextStyle(color: AppColors.black.withOpacity(0.5),),
+                enabledBorder:  OutlineInputBorder(
+                  borderSide: BorderSide(color: AppColors.black, width: 0.1),
                 ),
-                focusedBorder: const OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.black, width: 0.1),
+                focusedBorder:  OutlineInputBorder(
+                  borderSide: BorderSide(color: AppColors.black, width: 0.1),
                 ),
               ),
             ),
@@ -144,21 +146,21 @@ class _AddAddressScreenState extends State<AddAddressScreen> {
       );
 
   _getAppBar() => AppBar(
-        title: const Center(
+        title:  Center(
             child: Text(
           "Add Address",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: AppColors.black),
         )),
         leading: GestureDetector(
           onTap: () {
             Navigator.of(context).pop();
           },
-          child: const Icon(
+          child:  Icon(
             Icons.arrow_back_ios,
             color: AppColors.black,
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.backgroundColor,
         elevation: 0,
         actions: [
           SvgPicture.asset(AppIcons.wishlist),

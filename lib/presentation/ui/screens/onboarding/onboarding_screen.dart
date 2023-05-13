@@ -26,6 +26,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
     return SafeArea(
       child: Scaffold(
+        backgroundColor: AppColors.backgroundColor,
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.only(bottom: 24.0),
           child: Row(
